@@ -376,6 +376,8 @@
 # juft(20)
 # juft(123)
 
+# 1.Berilgan oraliqdagi tub sonlar ro'yxatini qaytaruvchi funksiya yozing
+# (tub sonlar — faqat birga va o'ziga qoldiqsiz bo'linuvchi, 1 dan katta musbat sonlar)👇🏻
 
 def tub_sonlarni_top(min, max):
     tub_sonlar = []
@@ -399,3 +401,22 @@ oraliq1 = int(input("Birinchi oraliq: "))
 oraliq2 = int(input("Ikkinchi oraliq: "))
 tub_oraliq = tub_sonlarni_top(oraliq1, oraliq2)
 print(tub_oraliq)
+
+
+# 2.Foydalanuvchidan son qabul qilib, shu son miqdoricha Fibonachchi ketma-ketligidagi
+# sonlar ro'yxatni qaytaruvchi funksiya yozing.
+# Ta’rif: Har bir hadi o’zidan oldingi ikkita hadning yig’indisiga teng bo’lgan ketma-ketlik
+# Fibonachchi ketma-ketligi deyiladi. Bunda boshlang’ish had ko’pincha 1 deb olinadi.
+# 1, 1, 2, 3, 5, 8, 13, 21, 34, 55,👇🏻
+
+def fibonacci(n):
+    sonlar = []
+    for x in range(n):
+        if x == 0 or x == 1:
+            sonlar.append(1)
+        else:
+            sonlar.append(sonlar[x - 1] + sonlar[x - 2])
+    return sonlar
+
+
+print(fibonacci(20))
