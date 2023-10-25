@@ -410,6 +410,6 @@ def katta_harf(ism):
         ism[1] = ism[1].title()
 
 
-ismlar = ['ali', 'vali', 'hasan', 'husan',]
+ismlar = ['ali', 'vali', 'hasan', 'husan']
 katta_harf(ismlar)
 print(ismlar)
