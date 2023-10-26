@@ -405,15 +405,15 @@
 # Funkiyaga ro'yhat uzatib ro'yhatda uchragan vali ismini birinchi harfini katta harf bilan,
 # qolgan elementlarini hamma harfini katta harf bilan chiqaring.Hamda ali ismli odamga salom yo'llang!
 
-def katta_harf(ism):
-    for i in range(len(ism)):
-        if ism[i] == 'vali':
-            ism[i] = ism[i].title()
-            print(f"Salom, {ism[i]}")
-        else:
-            ism[i] = ism[i].upper()
+# def katta_harf(ism):
+#     for i in range(len(ism)):
+#         if ism[i] == 'vali':
+#             ism[i] = ism[i].title()
+#             print(f"Salom, {ism[i]}")
+#         else:
+#             ism[i] = ism[i].upper()
 
 
-ismlar = ['ali', 'vali', 'hasan', 'husan']
-katta_harf(ismlar)
-print(ismlar)
+# ismlar = ['ali', 'vali', 'hasan', 'husan']
+# katta_harf(ismlar)
+# print(ismlar)
