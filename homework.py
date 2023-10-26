@@ -407,7 +407,11 @@
 
 def katta_harf(ism):
     for i in range(len(ism)):
-        ism[1] = ism[1].title()
+        if ism[i] == 'vali':
+            ism[i] = ism[i].title()
+            print(f"Salom, {ism[i]}")
+        else:
+            ism[i] = ism[i].upper()
 
 
 ismlar = ['ali', 'vali', 'hasan', 'husan']
