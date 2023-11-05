@@ -420,6 +420,7 @@
 
 import random as r
 
+
 # print("Omad show o'yiniga xush kelibsiz!")
 #
 # mijozlar = []
@@ -442,3 +443,33 @@ import random as r
 # print(f"Hurmatli {r.choice(mijozlar)} raqam egasi sizni keyingi ko'rsatuvga taklif qilamiz!")
 
 
+class Avto:
+    def __init__(self, model, rang, korobka, narh):
+        self.model = model
+        self.rang = rang
+        self.korobka = korobka
+        self.narh = narh
+        self.kilometr = 0
+
+    def get_kilometr(self, new_kilometr):
+        self.kilometr = new_kilometr
+
+    def get_model(self, model):
+        return self.model
+
+    def get_rang(self):
+        return self.rang
+
+    def get_korobka(self):
+        return self.korobka
+
+    def get_price(self):
+        return self.narh
+
+    def get_info(self):
+        return (f"{self.model} {self.rang} rang,"
+                f" korobka {self.korobka} narhi {self.narh} ")
+
+
+avto1 = Avto("BMW", "ko'k", "avtomat", 100000)
+print(avto1.get_info())
