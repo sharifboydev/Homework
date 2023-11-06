@@ -472,4 +472,5 @@ class Avto:
 
 
 avto1 = Avto("BMW", "ko'k", "avtomat", 100000)
+avto1.get_price(3)
 print(avto1.get_info())
