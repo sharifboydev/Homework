@@ -444,33 +444,29 @@ import random as r
 
 
 class Avto:
-    def __init__(self, model, rang, korobka, narh):
+    """Avto nomli class yaratamiz"""
+
+    def __init__(self, rangi, model, narxi, korobka, yili):
+        """Avtoning xususiyatlari"""
+        self.rang = rangi
         self.model = model
-        self.rang = rang
+        self.narx = narxi
         self.korobka = korobka
-        self.narh = narh
-        self.kilometr = 0
-
-    def get_kilometr(self, new_kilometr):
-        self.kilometr = new_kilometr
-
-    def get_model(self, model):
-        return self.model
-
-    def get_rang(self):
-        return self.rang
-
-    def get_korobka(self):
-        return self.korobka
-
-    def get_price(self):
-        return self.narh
+        self.yil = yili
+        self.km = 1000
 
     def get_info(self):
-        return (f"{self.model} {self.rang} rang,"
-                f" korobka {self.korobka} narhi {self.narh} ")
+        return (f"{self.rang} {self.model} narxi : {self.narx} \nkorobka : {self.korobka} "
+                f"\nishlab chiqarilgan yili: {self.yil} \nkilometri : {self.km} km yurgan.")
+
+    def set_kilometer(self, km):
+        self.km = km
+
+    def update_km(self):
+        self.km += 1000
 
 
-avto1 = Avto("BMW", "ko'k", "avtomat", 100000)
-avto1.get_price(3)
+avto1 = Avto("Black", "BMW", "$100000", "avtomat", 2015)
+print(avto1.get_info())
+avto1.update_km()
 print(avto1.get_info())
